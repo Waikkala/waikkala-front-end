@@ -1,0 +1,66 @@
+/* Design Tokens - From Figma */
+:root {
+  /* Colors */
+  --color-primary: #02261c; /* Holly - Primary dark green */
+  --color-secondary: #d4a574; /* Confetti - Orange/tan */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Grays */
+  --color-gray-20: #333333;
+  --color-gray-33: #555555;
+  --color-gray-40: #666666;
+  --color-gray-53: #888888;
+  --color-gray-80: #cccccc;
+  --color-gray-87: #dddddd;
+  --color-gray-88: #e0e0e0;
+  --color-gray-94: #e8f5e9;
+  --color-gray-95: #f0f7f4;
+  --color-gray-98: #f8f9fa;
+
+  /* Accent colors */
+  --color-success: #2e7d32; /* Sea Green */
+  --color-success-bg: #e8f5e9; /* Panache */
+
+  /* Typography */
+  --font-family-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-family-secondary: Arial, sans-serif;
+
+  /* Font sizes */
+  --font-size-9: 0.5625rem; /* 9px */
+  --font-size-10: 0.625rem; /* 10px */
+  --font-size-14: 0.875rem; /* 14px */
+  --font-size-15: 0.9375rem; /* 15px */
+  --font-size-16: 1rem; /* 16px */
+  --font-size-18: 1.125rem; /* 18px */
+  --font-size-20: 1.25rem; /* 20px */
+  --font-size-28: 1.75rem; /* 28px */
+  --font-size-32: 2rem; /* 32px */
+  --font-size-36: 2.25rem; /* 36px */
+
+  /* Line heights */
+  --line-height-normal: 1;
+  --line-height-22: 1.4;
+  --line-height-25: 1.8;
+  --line-height-28: 1.8;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem; /* 8px */
+  --spacing-sm: 0.625rem; /* 10px */
+  --spacing-md: 0.9375rem; /* 15px */
+  --spacing-lg: 1.25rem; /* 20px */
+  --spacing-xl: 1.75rem; /* 28px */
+  --spacing-2xl: 2.5rem; /* 40px */
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 5px;
+  --radius-lg: 8px;
+  --radius-xl: 10px;
+  --radius-full: 20px;
+
+  /* Shadows */
+  --shadow-sm: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0px 2px 10px 0px rgba(2, 38, 28, 0.3);
+  --shadow-lg: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
