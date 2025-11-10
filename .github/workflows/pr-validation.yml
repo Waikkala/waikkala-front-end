@@ -1,0 +1,40 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+    types: [opened, synchronize, reopened]
+
+jobs:
+  validate:
+    name: Build and Validate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: 'waikkala-product-page/package-lock.json'
+
+      - name: Install dependencies
+        working-directory: ./waikkala-product-page
+        run: npm ci
+
+      - name: Build project
+        working-directory: ./waikkala-product-page
+        run: npm run build
+
+      - name: Report success
+        if: success()
+        run: echo "✅ All checks passed successfully!"
+
+      - name: Report failure
+        if: failure()
+        run: echo "❌ Build or validation failed. Please check the logs above."
