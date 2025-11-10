@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Icon from '../atoms/Icon';
+import Icon from '../base/Icon';
 
 const DeliveryInfo = ({ deliveryIcon, clockIcon, className = '' }) => {
   return (

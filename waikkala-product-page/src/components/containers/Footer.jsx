@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import SocialLinks from '../molecules/SocialLinks';
+import SocialLinks from '../composite/SocialLinks';
 
 const Footer = ({ logoSrc, socialIcons }) => {
   return (

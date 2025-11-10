@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import Badge from '../atoms/Badge';
-import Button from '../atoms/Button';
-import QuantitySelector from '../molecules/QuantitySelector';
-import PaymentOptions from '../molecules/PaymentOptions';
-import DeliveryInfo from '../molecules/DeliveryInfo';
+import Badge from '../base/Badge';
+import Button from '../base/Button';
+import QuantitySelector from '../composite/QuantitySelector';
+import PaymentOptions from '../composite/PaymentOptions';
+import DeliveryInfo from '../composite/DeliveryInfo';
 
 const ProductDetails = ({
   title,
