@@ -1,10 +1,10 @@
 # Component Documentation
 
-## Atomic Design Structure
+## Component Structure
 
-This project follows the Atomic Design methodology for organizing components.
+This project organizes components into three categories based on their complexity and purpose.
 
-### 🧬 Atoms (Basic Building Blocks)
+### 🧱 Base Components (Basic Building Blocks)
 
 #### Button.jsx
 Reusable button component with multiple variants and sizes.
@@ -95,7 +95,7 @@ SVG icon component.
 
 ---
 
-### 🧪 Molecules (Component Combinations)
+### 🔧 Composite Components (Component Combinations)
 
 #### QuantitySelector.jsx
 Interactive quantity selection with increment/decrement buttons.
@@ -200,7 +200,7 @@ Delivery information display.
 
 ---
 
-### 🏗️ Organisms (Complex Components)
+### 📦 Container Components (Complex Components)
 
 #### Header.jsx
 Complete page header with logo, navigation, and search.
@@ -317,7 +317,7 @@ Tabbed content section with multiple tabs.
 ### 📄 Pages
 
 #### ProductPage.jsx
-Main product page that combines all organisms.
+Main product page that combines all container components.
 
 **Features:**
 - Header with navigation
@@ -376,7 +376,10 @@ All components use Tailwind CSS classes and follow these principles:
 
 When creating new components:
 
-1. Determine the appropriate level (Atom, Molecule, or Organism)
+1. Determine the appropriate category:
+   - **Base**: Simple, reusable UI elements (buttons, inputs, icons)
+   - **Composite**: Combinations of base components (search bars, selectors)
+   - **Containers**: Complex components that compose multiple components (headers, footers)
 2. Create the component file in the correct directory
 3. Define PropTypes for all props
 4. Provide default props where appropriate

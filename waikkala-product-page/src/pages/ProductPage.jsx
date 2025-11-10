@@ -1,8 +1,8 @@
-import Header from '../components/organisms/Header';
-import Footer from '../components/organisms/Footer';
-import ProductImage from '../components/molecules/ProductImage';
-import ProductDetails from '../components/organisms/ProductDetails';
-import TabsSection from '../components/organisms/TabsSection';
+import Header from '../components/containers/Header';
+import Footer from '../components/containers/Footer';
+import ProductImage from '../components/composite/ProductImage';
+import ProductDetails from '../components/containers/ProductDetails';
+import TabsSection from '../components/containers/TabsSection';
 import { assets, productData } from '../utils/assets';
 
 const ProductPage = () => {

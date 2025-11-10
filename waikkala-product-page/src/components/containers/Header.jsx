@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import SearchBar from '../molecules/SearchBar';
+import SearchBar from '../composite/SearchBar';
 
 const Header = ({ logoSrc }) => {
   const navItems = ['Products', 'Contacts', 'Order Tracking'];
