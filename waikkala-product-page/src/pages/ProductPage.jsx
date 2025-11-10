@@ -11,22 +11,22 @@ const ProductPage = () => {
   };
 
   return (
-    <div className="bg-gray-lightest">
+    <div className="w-full bg-gray-lightest overflow-x-hidden">
       {/* Header */}
       <Header logoSrc={assets.images.logo} />
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-6">
-        <div className="bg-white rounded-xl shadow-custom-md p-6 sm:p-8 lg:p-10">
+      <main className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-6">
+        <div className="bg-white rounded-lg sm:rounded-xl shadow-custom-md p-4 sm:p-6 md:p-8 lg:p-10">
           {/* Product Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mb-6 sm:mb-8">
             {/* Product Images */}
-            <div className="flex items-start justify-center">
+            <div className="flex items-start justify-center w-full">
               <ProductImage images={productData.images} alt={productData.title} />
             </div>
 
             {/* Product Details */}
-            <div className="flex items-start lg:pt-4">
+            <div className="flex items-start w-full">
               <ProductDetails
                 title={productData.title}
                 subtitle={productData.subtitle}

@@ -25,8 +25,8 @@ const QuantitySelector = ({ initialQuantity = 1, onQuantityChange, className = '
   };
 
   return (
-    <div className={`flex items-center gap-4 ${className}`}>
-      <span className="text-base font-bold text-primary">Quantity:</span>
+    <div className={`flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 w-full ${className}`}>
+      <span className="text-sm sm:text-base font-bold text-primary">Quantity:</span>
       <div className="flex items-center border-2 border-gray-lighter rounded-md overflow-hidden">
         <button
           onClick={handleDecrease}
