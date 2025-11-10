@@ -6,7 +6,7 @@ A fully responsive React product page for Ceylon Raga Reserve Masala Brew, built
 
 - **Responsive Design**: Mobile-first approach with seamless tablet and desktop experiences
 - **Modern Stack**: Built with React, Vite, and Tailwind CSS
-- **Component-Based Architecture**: Organized using Atomic Design principles
+- **Component-Based Architecture**: Organized into base, composite, and container components
 - **Type-Safe**: PropTypes validation for all components
 - **Code Quality**: ESLint + Prettier for consistent, clean code
 - **Performance Optimized**: Fast loading with Vite's HMR
@@ -26,10 +26,10 @@ A fully responsive React product page for Ceylon Raga Reserve Masala Brew, built
 waikkala-product-page/
 ├── src/
 │   ├── assets/              # Static assets (images, icons, fonts)
-│   ├── components/          # React components organized by atomic design
-│   │   ├── atoms/           # Basic building blocks (Button, Input, Badge, etc.)
-│   │   ├── molecules/       # Combinations of atoms (SearchBar, QuantitySelector, etc.)
-│   │   └── organisms/       # Complex components (Header, Footer, ProductDetails, etc.)
+│   ├── components/          # React components organized by complexity
+│   │   ├── base/            # Basic building blocks (Button, Input, Badge, Icon, Logo)
+│   │   ├── composite/       # Composite components (SearchBar, QuantitySelector, ProductImage, etc.)
+│   │   └── containers/      # Complex containers (Header, Footer, ProductDetails, TabsSection)
 │   ├── pages/               # Page-level components
 │   │   └── ProductPage.jsx  # Main product page
 │   ├── styles/              # Global styles and CSS variables
