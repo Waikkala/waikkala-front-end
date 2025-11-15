@@ -87,25 +87,25 @@ export const productData = {
       src: assets.icons.facebook,
       url: "#",
       label: "Facebook",
-      size: 21
+      size: 40
     },
     {
       src: assets.icons.instagram,
       url: "#",
       label: "Instagram",
-      size: 16
+      size: 40
     },
     {
       src: assets.icons.mail,
       url: "mailto:info@waikkala.com",
       label: "Email",
-      size: 18
+      size: 40
     },
     {
       src: assets.icons.call,
       url: "tel:+94123456789",
       label: "Phone",
-      size: 18
+      size: 40
     }
   ]
 };
