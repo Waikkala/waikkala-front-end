@@ -9,9 +9,8 @@ const CartPage = ({ cartItems, cartCount }) => {
   const navigate = useNavigate();
 
   const handlePlaceOrder = () => {
-    alert('Order placed successfully! Thank you for your purchase.');
-    // Here you would typically process the order and navigate to a confirmation page
-    navigate('/');
+    // Navigate to checkout page
+    navigate('/checkout');
   };
 
   const handleRemoveItem = (itemId) => {
