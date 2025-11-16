@@ -7,7 +7,7 @@ const ProductImage = ({ images, alt = 'Product', className = '' }) => {
   return (
     <div className={`flex flex-col gap-4 ${className}`}>
       {/* Main Image */}
-      <div className="w-full max-w-[510px] h-[510px] overflow-hidden rounded-lg shadow-custom-lg bg-white mx-auto">
+      <div className="w-full max-w-[510px] h-[300px] sm:h-[400px] md:h-[510px] overflow-hidden rounded-lg shadow-custom-lg bg-white mx-auto">
         <img
           src={images[selectedImage]}
           alt={`${alt} - Main view`}
@@ -16,14 +16,14 @@ const ProductImage = ({ images, alt = 'Product', className = '' }) => {
       </div>
 
       {/* Thumbnail Images */}
-      <div className="flex gap-8 justify-center">
+      <div className="flex gap-2 sm:gap-4 md:gap-8 justify-center overflow-x-auto pb-2">
         {images.map((image, index) => (
           <button
             key={index}
             onClick={() => setSelectedImage(index)}
-            className={`w-[240px] h-[187px] overflow-hidden rounded-lg shadow-lg transition-all duration-300 ${
+            className={`flex-shrink-0 w-[100px] h-[80px] sm:w-[150px] sm:h-[120px] md:w-[240px] md:h-[187px] overflow-hidden rounded-lg shadow-lg transition-all duration-300 ${
               selectedImage === index
-                ? 'ring-4 ring-secondary scale-105'
+                ? 'ring-2 sm:ring-4 ring-secondary scale-105'
                 : 'hover:ring-2 hover:ring-gray-light'
             }`}
           >
