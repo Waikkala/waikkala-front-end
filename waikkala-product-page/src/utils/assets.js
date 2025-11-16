@@ -7,6 +7,7 @@ export const assets = {
     bgImage: "https://www.figma.com/api/mcp/asset/5e9454c7-c0ec-4b1a-93b2-df5659489235",
     logo: "https://www.figma.com/api/mcp/asset/7fcd4fad-dd67-476a-baed-787ec69a807b",
     tbag: tbagImage,
+    bg: "/bg.png",
   },
   icons: {
     delivery: "https://www.figma.com/api/mcp/asset/0630b332-e36d-42e0-bb27-ac480276e39b",

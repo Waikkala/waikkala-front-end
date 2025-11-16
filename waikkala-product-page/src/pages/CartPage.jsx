@@ -23,7 +23,13 @@ const CartPage = ({ cartItems, cartCount }) => {
       {/* Cart Header Banner */}
       <div
         className="w-full py-12 sm:py-16 px-4 relative overflow-hidden"
-        style={{ backgroundColor: '#02261C' }}
+        style={{
+          backgroundColor: '#02261C',
+          backgroundImage: `url(${assets.images.bg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
       >
         {/* Background Pattern (decorative) */}
         <div className="absolute inset-0 opacity-10">

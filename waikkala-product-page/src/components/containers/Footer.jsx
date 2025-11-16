@@ -1,9 +1,18 @@
 import PropTypes from 'prop-types';
 import SocialLinks from '../composite/SocialLinks';
+import { assets } from '../../utils/assets';
 
 const Footer = ({ logoSrc, socialIcons }) => {
+  const footerStyle = {
+    backgroundColor: '#02261C',
+    backgroundImage: `url(${assets.images.bg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  };
+
   return (
-    <footer className="w-full py-6 px-4 sm:px-6 md:px-8 lg:px-12 overflow-x-hidden" style={{ backgroundColor: '#02261C' }}>
+    <footer className="w-full py-6 px-4 sm:px-6 md:px-8 lg:px-12 overflow-x-hidden" style={footerStyle}>
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-3 w-full">
         {/* Logo */}
         <div className="w-20 h-20 sm:w-[90px] sm:h-[90px] overflow-hidden rounded-sm shadow-custom-lg flex-shrink-0">

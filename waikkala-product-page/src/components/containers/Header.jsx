@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { assets } from '../../utils/assets';
 
 const Header = ({ logoSrc, cartCount = 0 }) => {
   const navigate = useNavigate();
@@ -11,8 +12,16 @@ const Header = ({ logoSrc, cartCount = 0 }) => {
     }
   };
 
+  const headerStyle = {
+    backgroundColor: '#02261C',
+    backgroundImage: `url(${assets.images.bg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  };
+
   return (
-    <header className="w-full overflow-x-hidden" style={{ backgroundColor: '#02261C' }}>
+    <header className="w-full overflow-x-hidden" style={headerStyle}>
       {/* Top Banner with Logo and Promotional Text */}
       <div className="flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 py-3 gap-2">
         {/* Logo */}

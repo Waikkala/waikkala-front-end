@@ -39,7 +39,13 @@ const CheckoutPage = ({ cartItems }) => {
       {/* Checkout Header Banner */}
       <div
         className="w-full py-12 sm:py-16 px-4 relative overflow-hidden"
-        style={{ backgroundColor: '#02261C' }}
+        style={{
+          backgroundColor: '#02261C',
+          backgroundImage: `url(${assets.images.bg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
       >
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
