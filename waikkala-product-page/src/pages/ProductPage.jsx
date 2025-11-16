@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Header from '../components/containers/Header';
 import Footer from '../components/containers/Footer';
 import ProductImage from '../components/composite/ProductImage';
@@ -6,17 +8,46 @@ import ProductDetails from '../components/containers/ProductDetails';
 import TabsSection from '../components/containers/TabsSection';
 import { assets, productData } from '../utils/assets';
 
-const ProductPage = () => {
-  const [cartCount, setCartCount] = useState(0);
+const ProductPage = ({ cartCount, onAddToCart }) => {
+  const navigate = useNavigate();
   const [currentQuantity, setCurrentQuantity] = useState(1);
   const [selectedWeight, setSelectedWeight] = useState('100g');
 
   const handleOrder = () => {
-    alert(`Order placed!\nQuantity: ${currentQuantity}\nWeight: ${selectedWeight}\nThank you for your purchase.`);
+    // Create cart item
+    const cartItem = {
+      id: Date.now().toString(),
+      image: productData.images[0],
+      title: productData.title,
+      subtitle: productData.subtitle,
+      quantity: currentQuantity,
+      weight: selectedWeight,
+      price: parseFloat(productData.price.replace(/,/g, '')),
+    };
+
+    // Add to cart
+    onAddToCart(cartItem);
+
+    // Navigate to cart
+    navigate('/cart');
   };
 
   const handleAddToCart = () => {
-    setCartCount(prevCount => prevCount + currentQuantity);
+    // Create cart item
+    const cartItem = {
+      id: Date.now().toString(),
+      image: productData.images[0],
+      title: productData.title,
+      subtitle: productData.subtitle,
+      quantity: currentQuantity,
+      weight: selectedWeight,
+      price: parseFloat(productData.price.replace(/,/g, '')),
+    };
+
+    // Add to cart
+    onAddToCart(cartItem);
+
+    // Show success message
     alert(`Added ${currentQuantity} item(s) (${selectedWeight}) to cart!`);
   };
 
@@ -70,6 +101,11 @@ const ProductPage = () => {
       <Footer logoSrc={assets.images.logo} socialIcons={productData.socialIcons} />
     </div>
   );
+};
+
+ProductPage.propTypes = {
+  cartCount: PropTypes.number.isRequired,
+  onAddToCart: PropTypes.func.isRequired,
 };
 
 export default ProductPage;

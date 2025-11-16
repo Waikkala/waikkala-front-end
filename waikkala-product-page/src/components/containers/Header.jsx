@@ -1,12 +1,22 @@
 import PropTypes from 'prop-types';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = ({ logoSrc, cartCount = 0 }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleCartClick = () => {
+    if (cartCount > 0) {
+      navigate('/cart');
+    }
+  };
+
   return (
     <header className="w-full overflow-x-hidden" style={{ backgroundColor: '#02261C' }}>
       {/* Top Banner with Logo and Promotional Text */}
       <div className="flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 py-3 gap-2">
         {/* Logo */}
-        <div className="flex items-center flex-shrink-0">
+        <div className="flex items-center flex-shrink-0 cursor-pointer" onClick={() => navigate('/')}>
           <img src={logoSrc} alt="Waikkala Grinding Mills" className="h-10 sm:h-12 w-auto" />
         </div>
 
@@ -37,7 +47,11 @@ const Header = ({ logoSrc, cartCount = 0 }) => {
 
           {/* Cart Icon */}
           <div className="flex items-center justify-end">
-            <button className="relative p-2 hover:opacity-80 transition-opacity">
+            <button
+              onClick={handleCartClick}
+              className={`relative p-2 transition-opacity ${cartCount > 0 ? 'hover:opacity-80 cursor-pointer' : 'opacity-50 cursor-not-allowed'}`}
+              disabled={cartCount === 0}
+            >
               <svg
                 className="w-8 h-8 sm:w-10 sm:h-10"
                 viewBox="0 0 24 24"
