@@ -1,9 +1,12 @@
+import tbagImage from '../assets/tbag.png';
+
 // Asset URLs from Figma Design
 export const assets = {
   images: {
     productMain: "https://www.figma.com/api/mcp/asset/249ad6ca-d8e2-4d5c-86e1-fdd7e403f802",
     bgImage: "https://www.figma.com/api/mcp/asset/5e9454c7-c0ec-4b1a-93b2-df5659489235",
     logo: "https://www.figma.com/api/mcp/asset/7fcd4fad-dd67-476a-baed-787ec69a807b",
+    tbag: tbagImage,
   },
   icons: {
     delivery: "https://www.figma.com/api/mcp/asset/0630b332-e36d-42e0-bb27-ac480276e39b",

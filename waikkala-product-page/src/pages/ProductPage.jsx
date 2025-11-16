@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Header from '../components/containers/Header';
 import Footer from '../components/containers/Footer';
 import ProductImage from '../components/composite/ProductImage';
@@ -6,14 +7,31 @@ import TabsSection from '../components/containers/TabsSection';
 import { assets, productData } from '../utils/assets';
 
 const ProductPage = () => {
+  const [cartCount, setCartCount] = useState(0);
+  const [currentQuantity, setCurrentQuantity] = useState(1);
+  const [selectedWeight, setSelectedWeight] = useState('100g');
+
   const handleOrder = () => {
-    alert('Order placed! Thank you for your purchase.');
+    alert(`Order placed!\nQuantity: ${currentQuantity}\nWeight: ${selectedWeight}\nThank you for your purchase.`);
+  };
+
+  const handleAddToCart = () => {
+    setCartCount(prevCount => prevCount + currentQuantity);
+    alert(`Added ${currentQuantity} item(s) (${selectedWeight}) to cart!`);
+  };
+
+  const handleQuantityChange = (quantity) => {
+    setCurrentQuantity(quantity);
+  };
+
+  const handleWeightChange = (weight) => {
+    setSelectedWeight(weight);
   };
 
   return (
     <div className="w-full bg-gray-lightest overflow-x-hidden">
       {/* Header */}
-      <Header logoSrc={assets.images.logo} />
+      <Header logoSrc={assets.images.logo} cartCount={cartCount} />
 
       {/* Main Content */}
       <main className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-6">
@@ -32,10 +50,13 @@ const ProductPage = () => {
                 subtitle={productData.subtitle}
                 price={productData.price}
                 currency={productData.currency}
-                weight={productData.weight}
+                productImage={assets.images.tbag}
                 deliveryIcon={assets.icons.delivery}
                 clockIcon={assets.icons.clock}
                 onOrder={handleOrder}
+                onAddToCart={handleAddToCart}
+                onQuantityChange={handleQuantityChange}
+                onWeightChange={handleWeightChange}
               />
             </div>
           </div>
